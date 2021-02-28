@@ -1,0 +1,24 @@
+<main style="margin-top: 180px;">
+    <div class="container col-sm-12">
+        <section id="content" class="col-sm-12">
+            <form (ngSubmit)="login()" #loginForm="ngForm" class="col-sm-10">
+                <h1 class="col-sm-12">Login</h1>
+                <div class="col-sm-12">
+                    <input type="text" autocomplete="false" name="username" 
+                    [(ngModel)]='user.username' #username="ngModel" 
+                    placeholder="Enter Username (UID Number)" required="" id="username" />
+                </div>
+                <div class="col-sm-12">
+                    <input type="password" autocomplete="false" name="password" 
+                    [(ngModel)]='user.password' #password="ngModel" 
+                    placeholder="Enter Password" required="" id="password" />
+                </div>
+                <div class="col-sm-12">
+                    <input style="margin-left: 33px;" [disabled]="!loginForm.form.valid" type="submit" value="Log in" />
+                    <!-- <a href="#">Lost your password?</a>
+                    <a href="#">Register</a> -->
+                </div>
+            </form>
+        </section>
+    </div>
+</main>
